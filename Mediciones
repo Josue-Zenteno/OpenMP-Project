@@ -189,3 +189,202 @@ Medicion 200000 :
     B: (23702.88593300 + 23697.32919500 + 23685.31486200)/3 = 23695.17666333333 
     C: (109164.76463800 + 109391.60571600 + 109639.89487900)/3 = 109398.75507766668
     D: (83039.38122900 + 83271.19046700 + 83485.25497400)/3 = 83265.27555666666
+
+    ------------------------------------------------------------------------------------------
+
+    Medicion 10:
+    A:
+        1: 0.04789200 milisegundos**
+        2: 0.02926600 milisegundos
+        3: 0.02086400 milisegundos*
+        4: 0.02747000 milisegundos
+        5: 0.03403800 milisegundos
+    B:
+        1: 0.02791100 milisegundos
+        2: 0.01754400 milisegundos*
+        3: 0.01817900 milisegundos
+        4: 0.02260000 milisegundos
+        5: 0.03184400 milisegundos**
+    C:
+        1: 0.03082100 milisegundos
+        2: 0.03009300 milisegundos
+        3: 0.02352300 milisegundos*
+        4: 0.04102900 milisegundos**
+        5: 0.02737100 milisegundos
+    D:
+        1: 0.02492700 milisegundos
+        2: 0.02916300 milisegundos
+        3: 0.02357000 milisegundos*
+        4: 0.03676200 milisegundos**
+        5: 0.03070200 milisegundos
+
+    Delete the slowest and the fastest and average of the other three
+    A: (0.02926600+0.02747000+0.03403800)/3 = 0.030257999999999997
+    B: (0.02791100+0.01817900+0.02260000)/3 = 0.022896666666666666
+    C: (0.03082100+0.03009300+0.02737100)/3 = 0.029428333333333334
+    D: (0.02492700+0.02916300+0.03070200)/3 = 0.028264
+    
+        
+Medicion 100:
+    A:
+        1: 0.11278200 milisegundos
+        2: 0.13496100 milisegundos
+        3: 0.05250400 milisegundos*
+        4: 0.10620400 milisegundos
+        5: 0.19603500 milisegundos**
+    B:
+        1: 0.07614500 milisegundos
+        2: 0.09286800 milisegundos
+        3: 0.02710600 milisegundos*
+        4: 0.08691000 milisegundos
+        5: 0.13861300 milisegundos**
+    C:
+        1: 0.20096300 milisegundos
+        2: 0.19111600 milisegundos
+        3: 0.09713800 milisegundos*
+        4: 0.20829900 milisegundos
+        5: 0.27409900 milisegundos**
+    D:
+        1: 0.21114900 milisegundos
+        2: 0.19245800 milisegundos
+        3: 0.15323400 milisegundos*
+        4: 0.18618100 milisegundos
+        5: 0.30385500 milisegundos**
+
+    Delete the slowest and the fastest and average of the other three
+    A: (0.11278200+0.13496100+0.10620400)/3 = 0.11798233333333334
+    B: (0.07614500+0.09286800+0.08691000)/3 = 0.08530766666666667
+    C: (0.20096300+0.19111600+0.20829900)/3 = 0.20012600000000003
+    D: (0.21114900+0.19245800+0.18618100)/3 = 0.196596
+    
+
+Medicion 1000:
+    A:
+        1: 5.57368300 milisegundos**
+        2: 1.86236000 milisegundos
+        3: 2.29279300 milisegundos
+        4: 1.70339000 milisegundos
+        5: 1.69719400 milisegundos*
+    B:
+        1: 5.41146800 milisegundos**
+        2: 2.06240100 milisegundos
+        3: 2.73795000 milisegundos
+        4: 2.05725300 milisegundos*
+        5: 2.08169600 milisegundos
+    C:
+        1: 14.54388900 milisegundos**
+        2: 6.04039000 milisegundos
+        3: 9.25284000 milisegundos
+        4: 5.64434200 milisegundos
+        5: 4.30718000 milisegundos*
+    D:
+        1: 9.79168100 milisegundos**
+        2: 5.88649300 milisegundos
+        3: 9.73108300 milisegundos
+        4: 6.54678200 milisegundos
+        5: 3.92546800 milisegundos*
+
+    Delete the slowest and the fastest and average of the other three
+    A: (1.86236000+2.29279300+1.70339000)/3 = 1.9528476666666668
+    B: (2.06240100+2.73795000+2.08169600)/3 = 2.2940156666666667
+    C: (6.04039000+9.25284000+5.64434200)/3 = 6.979190666666668
+    D: (5.88649300+9.73108300+6.54678200)/3 = 7.388119333333333
+    
+
+Medicion 10000:
+    A:
+        1: 109.25207400 milisegundos
+        2: 97.63302400 milisegundos*
+        3: 110.63868000 milisegundos
+        4: 112.98691400 milisegundos**
+        5: 98.62503600 milisegundos
+    B:
+        1: 84.14285200 milisegundos
+        2: 86.85032200 milisegundos**
+        3: 82.15001300 milisegundos
+        4: 80.31590400 milisegundos*
+        5: 85.45222500 milisegundos
+    C:
+        1: 316.97606300 milisegundos 
+        2: 326.95380900 milisegundos**
+        3: 303.84590900 milisegundos*
+        4: 304.26317400 milisegundos
+        5: 315.01412200 milisegundos
+    D:
+        1: 266.00106800 milisegundos
+        2: 265.96868600 milisegundos
+        3: 245.49389200 milisegundos*
+        4: 255.00881500 milisegundos
+        5: 272.03367800 milisegundos**
+
+    Delete the slowest and the fastest and average of the other three
+    A: (109.25207400+110.63868000+98.62503600)/3 = 106.17192999999999
+    B: (84.14285200+82.15001300+85.45222500)/3 = 83.91503
+    C: (316.97606300+304.26317400+315.01412200)/3 = 312.084453
+    D: (266.00106800+265.96868600+255.00881500)/3 = 262.32618966666666
+    
+
+Medicion 100000:
+    A:
+        1: 5365.43000600 milisegundos*
+        2: 5724.46013600 milisegundos
+        3: 5812.30752500 milisegundos**
+        4: 5632.61628900 milisegundos
+        5: 5576.56169400 milisegundos
+    B:
+        1: 8233.84477700 milisegundos
+        2: 8417.49496600 milisegundos
+        3: 8520.75287700 milisegundos**
+        4: 8292.42993800 milisegundos
+        5: 8195.77333700 milisegundos*
+    C:
+        1: 37467.53372700 milisegundos*
+        2: 37814.11073600 milisegundos**
+        3: 37797.61288200 milisegundos
+        4: 37494.21686400 milisegundos
+        5: 37616.82650800 milisegundos
+    D:
+        1: 29682.94504100 milisegundos
+        2: 30225.44848800 milisegundos**
+        3: 29267.47120300 milisegundos*
+        4: 29890.15135700 milisegundos
+        5: 29616.77579900 milisegundos
+
+    Delete the slowest and the fastest and average of the other three
+    A: (5724.46013600+5632.61628900+5576.56169400)/3 = 5644.546039666667
+    B: (8233.84477700+8417.49496600+8292.42993800)/3 = 8314.589893666665
+    C: (37797.61288200+37494.21686400+37616.82650800)/3 = 37636.218751333334
+    D: (29682.94504100+29890.15135700+29616.77579900)/3 = 29729.957398999995
+    
+
+Medicion 200000:
+    A:
+        1: 22777.58730800 milisegundos
+        2: 23021.42176000 milisegundos**
+        3: 19006.40999000 milisegundos*
+        4: 19109.34519000 milisegundos
+        5: 19493.52041800 milisegundos
+    B:
+        1: 33149.57607400 milisegundos
+        2: 34149.45030100 milisegundos**
+        3: 29173.34608700 milisegundos*
+        4: 29329.18235800 milisegundos
+        5: 30829.08196000 milisegundos
+    C:
+        1: 152230.99320800 milisegundos**
+        2: 148376.38411800 milisegundos
+        3: 135095.29466500 milisegundos*
+        4: 137464.46489400 milisegundos
+        5: 135739.21187700 milisegundos
+    D:
+        1: 127526.09602400 milisegundos**
+        2: 120767.69417300 milisegundos
+        3: 100963.64701000 milisegundos*
+        4: 102505.21123700 milisegundos
+        5: 119189.98656500 milisegundos
+
+    Delete the slowest and the fastest and average of the other three
+    A: (22777.58730800+19109.34519000+19493.52041800)/3 = 20460.150972
+    B: (33149.57607400+29329.18235800+30829.08196000)/3 = 31102.613464
+    C: (148376.38411800+137464.46489400+135739.21187700)/3 = 140526.68696300001
+    D: (120767.69417300+102505.21123700+119189.98656500)/3 = 114154.297325
