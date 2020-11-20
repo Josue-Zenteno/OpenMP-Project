@@ -90,8 +90,8 @@ void ord_secA(float vector[], int size)
 {
 	int incr, i, fin2;
 
-	for (incr = 2; incr < 2*size; incr= 2*incr)	
-		for (i= 0; i < (size-incr/2); i += incr)		// (i+incr/2) < size
+	for (incr = 2; incr < 2*size; incr = 2*incr)	
+		for (i = 0; i < (size-incr/2); i += incr)		// (i+incr/2) < size
 		{	fin2 = min(size-1,i+incr-1);
 			mezcla_ordenada(vector,i,i+incr/2,fin2);	
 			/* Quedan ordenados incr componentes consecutivos del vector (índices i,i+1,...i+incr-1)

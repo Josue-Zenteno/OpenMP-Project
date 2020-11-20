@@ -1,0 +1,30 @@
+Comments: 
+As we can see there is, in fact, a difference between the two processors that we are testing. 
+But this difference is only visible on the response times while executing the different algorithms.
+Therefore as we cn also see, the algorithms have the same behavior independently of the Architecture.
+
+So, analizyng every algorithm in a more exhaustive way we can observe these facts:
+
+    1.  Using small vector sizes, we can not appreciate a big difference between one
+        and another algorithm, as they have very similar response times. But the difference
+        between them appears when we set a large vector size, where both Algorithm C and D
+        increments dramatically the response time in comparison to the other algorithms.
+    
+    2.  The behaviors of the algorithms are very close to the Exponential behavior 
+        as they don't grow following a straight line (what happens if the response time would 
+        have growth in a propotional way). So we can state that multiplying the input by 10 
+        does not imply that the response time will grow 10 times too, it will grow much more.
+    
+    3.  There is not an absolute 'winner', there is not an algorithm that is always the fastest
+        one, as it depends on the vector size, in very low vector sizes the fastes Algorithm is B
+        but when th einput grows the fastest algorithm is A. That leads to think that if you want
+        to compute very small vector sizes you should use the Algorithm B and if you want to compute
+        very large vector you should use A, but it is a little bit tricky as if we look the difference
+        on the response times, there is not a notorious difference between A and B in small vector
+        sizes. So this can generally be insignificant, but if we are trying to be as precise as 
+        possible (for example in real time programs or distributed systems) it is a fact that algorithm
+        B is faster than A in the very beggining. 
+
+        A very different situation exist talking about the 'looser', as the worse algorithm talking
+        about response times is Algorithm C, this algorithm has proved that is very unneficent
+        as it's response time is the one tha grows faster and faster with respect to the others.
