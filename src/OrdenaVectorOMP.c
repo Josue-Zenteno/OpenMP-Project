@@ -11,7 +11,7 @@
 
 
 #define M 100			// ==> Rango de valores de los componentes: [0, M[
-#define VECT_SIZE 40 /// 50000	// N.º componentes del vector que se quiere ordenar
+#define VECT_SIZE 100000 /// 50000	// N.º componentes del vector que se quiere ordenar
 #define NM 4			// N.º de métodos de ordenación que se llamarán desde el programa principal
 #define min(a,b) ((a)<(b)? a:b)
 #define FALSE 0
@@ -86,11 +86,12 @@ void mezcla_ordenada(float vector[], int ini1, int ini2, int fin2)
 
 // Funciones que ordenan los size primeros elementos de un vector
 
-void ord_secA(float vector[], int size)
+void ord_parA(float vector[], int size)
 {
 	int incr, i, fin2;
 
-	for (incr = 2; incr < 2*size; incr = 2*incr)	
+	for (incr = 2; incr < 2*size; incr = 2*incr){
+		#pragma omp parallel for private (i,fin2) shared(vector,size,incr)
 		for (i = 0; i < (size-incr/2); i += incr)		// (i+incr/2) < size
 		{	fin2 = min(size-1,i+incr-1);
 			mezcla_ordenada(vector,i,i+incr/2,fin2);	
@@ -100,21 +101,26 @@ void ord_secA(float vector[], int size)
 		}
 		/* El último valor de incr cumple size <= incr < 2*size. 
 		 * Esto conlleva que está ordenado todo el vector, al ser size <= incr */
+	}
 }	// Fin de ord_secA
 
 
 void ord_secB(float vector[], int size)
 {
   int i,j; float x;
-  
-  for (int i = 1; i < size; i++)
-  {
-	 x = vector[i]; j = i-1;
-	 while ((x<vector[j])&&(0<=j))
-	 {
-		 vector[j+1]=vector[j]; j--;
-	 }
-	 vector[j+1]=x;
+
+  #pragma parallel private(j) shared(i,x)
+  for (int i = 1; i < size; i++){
+	x = vector[i];
+	#pragma atomic  
+	j = i-1;
+	while ((x<vector[j])&&(0<=j))
+	{
+		#pragma critical
+		vector[j+1]=vector[j]; j--;
+	}
+	vector[j+1]=x;
+	//Critical hasta aqui
   }
 }	// Fin de ord_secB
 
@@ -201,11 +207,11 @@ int main()
 		{
 			case	0:
 				copiarVector(vord0, vini, VECT_SIZE);	// vord0 <-- vini
-				printf("Ordenando por el método secuencial A\n");
-				ord_secA(vord0,VECT_SIZE);
-				printf("\nTiempo empleado por método secuencial A: %0.8f milisegundos\n",1000*(omp_get_wtime()-t));
-				if (estaOrdenado(vord0,VECT_SIZE)) printf("\nEl vector obtenido por el método secuencial A está ordenado\n");
-				else printf("\nEl vector obtenido por el método secuencial A no está ordenado\n");
+				printf("Ordenando por el método paralelo A\n");
+				ord_parA(vord0,VECT_SIZE);
+				printf("\nTiempo empleado por método paralelo A: %0.8f milisegundos\n",1000*(omp_get_wtime()-t));
+				if (estaOrdenado(vord0,VECT_SIZE)) printf("\nEl vector obtenido por el método paralelo A está ordenado\n");
+				else printf("\nEl vector obtenido por el método paralelo A no está ordenado\n");
 				break;
 			case	1:
 				copiarVector(vord, vini, VECT_SIZE);	// vord <-- vini
