@@ -11,7 +11,7 @@
 
 
 #define M 100			// ==> Rango de valores de los componentes: [0, M[
-#define VECT_SIZE 100000 /// 50000	// N.º componentes del vector que se quiere ordenar
+#define VECT_SIZE 200000 /// 50000	// N.º componentes del vector que se quiere ordenar
 #define NM 4			// N.º de métodos de ordenación que se llamarán desde el programa principal
 #define min(a,b) ((a)<(b)? a:b)
 #define FALSE 0
