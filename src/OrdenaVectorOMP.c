@@ -3,6 +3,11 @@
  * Compilación: gcc -W OrdenaVectorOMP.c -o OrdenaVectorOMP -fopenmp
  * Ejecución: ./OrdenaVectorOMP	
 */
+/*
+* Authors: 
+*  Josue Carlos Zenteno Yave : Intel Core i7-8750H  -  12 cores
+*  Sergio Silvestre Pavón : Intel Core i5-7200U  -  4 cores
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
